@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" >
+      <meta name="author" content="HariKode">
+      <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+      <title>Birthday Gift</title>
+      <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+      <div class="jumbotron jumbotron-fluid p-3 holder">
+
+        <div class="row">
+            <div class="col-sm-1 col-md-4 mb-3">
+
+            </div>
+            <div class="col-sm-11 col-md-8 mt-4">
+                <div class="text text-bold">
+                <p class="font-bold" id="quote">On your birthday, i pray you grow beyond your imaginations, live beyond your limits and rise above your fears. Happy Birthday</p>
+                
+                <br />
+                <p class="text-primary name"> Idy Willie </p>
+                
+                <div class="text-right p-2 mb-2"><button type="button" class="btn btn-primary" id="quotes-button">See Quotes</button> <span class="m-1"></span> <button class="btn btn-danger" id="story">Special room</button>  </div>
+                </div>
+            </div>
+        </div>
+          
+      </div>
+
+      <script>
+          var quotes = ['On your birthday, i pray you grow beyond your imaginations, live beyond your limits and rise above your fears. Happy Birthday', 'I wish you all the things i know you want. i want this from the bottom of my heart', 'The world is a little bit brighter because of you', 'All we need in life is good family and good friends. with you, i cant tell the difference', 'I have three important dates on my calendar. Christmas, New years Eve and your birthday. so, Happy Birthday!',
+          'Always remember how much you are loved and appreciated by all of us. Wishing you a very happy birthday', 'have a twinkle Day. full of delight, loved by everyone and never ending. Happy Birthday', 'The stars are uncountable. so are your Blessings. Happy Birthday!!', 'They say money makes the world go round. its wrong, your smile does. Happy birthday!!']
+        var index = 0;
+        var quote = '';
+        var button = document.getElementById('quotes-button').addEventListener('click', function(){
+            for (var i = 0; i < quotes.length; i++){
+                index = Math.floor(Math.random() * quotes.length);
+                quote = quotes[index];
+                
+                
+            }
+            console.log(quote)
+            document.getElementById('quote').innerHTML = quote;
+
+        })
+       
+        var button2 = document.getElementById('story').addEventListener('click', function(){
+            window.location = "story.html";
+        })
+        
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,28 @@
+.holder{
+    background-image: url(photos/flower1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 90vh;
+
+}
+@media screen and (max-width:600px){
+    .holder{
+        background-position: initial;
+        
+    }
+    .text{
+        position: absolute;
+        top: 270px;
+    }
+}
+.name{
+    font-size: 25px;
+}
+
+#quote{
+    height: 100px;
+    font-size: 20px;
+
+}

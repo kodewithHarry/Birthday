@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" >
+      <meta name="author" content="HariKode">
+      <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+      <title>Birthday Gift</title>
+      <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="story.css" />
+  </head>
+  <body>
+    <div class="jumbotron story-image" style="background-color: #000066;" >
+
+        <div class="row">
+            <div class="col">
+                <p class="text-light m-2 lead p-3 text">Can your little wife be this cute?</p>
+                <p class="lead text-warning">Happy Birthday Dear!!! have a fun filled day</p>
+            </div>
+            <div class="col-md-6">
+                <div class="container ">
+                    <img src="photos/id2.jpg" class=" img-thumbnail img-fluid" />
+                </div>
+            </div>
+        </div>
+        
+
+        
+        
+        <br />
+        <div class="container">
+            <a class="text-white btn-danger text-white btn-lg" role="button" id="download">Download Birthday Gift</a>
+        </div>
+    </div>
+    <script>
+        var images = ['id1.jpg', 'id2.jpg'];
+        setInterval(function(){
+            for(var i = 0; i<images.length; i++){
+                index = Math.floor(Math.random()* images.length);
+                image = images[index];
+            }
+            document.images[0].src = 'photos/' +  image;
+        }, 5000)
+
+
+
+        function download(file) {
+              
+              //creating an invisible element
+              var element = document.createElement('a');
+              element.setAttribute('href', 'photos/card.jpg');
+              element.setAttribute('download', file);
+
+              // Above code is equivalent to
+                // <a href="path of file" download="file name">
+              
+                    document.body.appendChild(element);
+              
+              //onClick property
+              element.click();
+            
+              document.body.removeChild(element);
+          }
+            
+          // Start file download.
+          document.getElementById("download").addEventListener("click", function() {
+              // Generate download of hello.txt 
+              // file with some content
+              var password = prompt("enter password (Celebrant Only)");
+              if (password == "Darasimi"){
+                  alert("Welcome Idara")
+                  var filename = "Card";
+            
+                  download(filename);
+              }else{
+                  alert("Incorrect Password, Try again")
+              }
+              
+              
+          }, false);
+
+          
+    </script>
+ </body>
+</html>
